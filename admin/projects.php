@@ -36,6 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Handle Multiple Images Upload
         $galleryImages = $_POST['existing_gallery'] ?? '';
+        if (isset($_POST['clear_gallery']) && $_POST['clear_gallery'] == '1') {
+            $galleryImages = '';
+        }
+        
         if (isset($_FILES['gallery']) && !empty($_FILES['gallery']['name'][0])) {
             $galleryArr = [];
             if(!empty($galleryImages)) $galleryArr = explode(',', $galleryImages);
@@ -257,6 +261,12 @@ require_once 'includes/header.php';
                         <div class="col-md-6">
                             <label class="form-label text-muted small">Add to Gallery (Multiple)</label>
                             <input type="file" name="gallery[]" class="form-control" accept="image/jpeg, image/png" multiple>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" name="clear_gallery" value="1" id="clear_gallery_proj">
+                                <label class="form-check-label text-muted small" for="clear_gallery_proj">
+                                    Clear existing gallery images
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>

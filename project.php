@@ -22,6 +22,15 @@ if (!empty($project['image'])) {
     array_unshift($gallery, $project['image']); // Add main image to start of gallery
 }
 
+// Filter out any images that were deleted from the server
+$validGallery = [];
+foreach($gallery as $img) {
+    if (file_exists($img)) {
+        $validGallery[] = $img;
+    }
+}
+$gallery = $validGallery;
+
 require_once 'includes/header.php'; 
 ?>
 
