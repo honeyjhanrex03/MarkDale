@@ -37,16 +37,16 @@ require_once 'includes/header.php';
             <!-- Left Side: Carousel & Details -->
             <div class="col-lg-8">
                 <?php if(count($gallery) > 1): ?>
-                    <div id="projectCarousel" class="carousel slide rounded-4 overflow-hidden shadow-lg mb-5" data-bs-ride="carousel">
+                    <div id="projectCarousel" class="carousel slide rounded-4 overflow-hidden shadow-lg mb-5" data-bs-ride="carousel" data-bs-interval="8000">
                         <div class="carousel-indicators">
                             <?php foreach($gallery as $index => $img): ?>
                                 <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="<?= $index ?>" <?= $index === 0 ? 'class="active"' : '' ?>></button>
                             <?php endforeach; ?>
                         </div>
-                        <div class="carousel-inner">
+                        <div class="carousel-inner" style="background-color: #121218;">
                             <?php foreach($gallery as $index => $img): ?>
                                 <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-                                    <img src="<?= htmlspecialchars($img) ?>" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Project Image">
+                                    <img src="<?= htmlspecialchars($img) ?>" class="d-block w-100" style="height: 500px; object-fit: contain;" alt="Project Image">
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -58,7 +58,9 @@ require_once 'includes/header.php';
                         </button>
                     </div>
                 <?php elseif(count($gallery) == 1): ?>
-                    <img src="<?= htmlspecialchars($gallery[0]) ?>" class="img-fluid rounded-4 shadow-lg w-100 mb-5" style="height: 500px; object-fit: cover;" alt="Project Image">
+                    <div class="rounded-4 shadow-lg w-100 mb-5 overflow-hidden" style="background-color: #121218;">
+                        <img src="<?= htmlspecialchars($gallery[0]) ?>" class="img-fluid w-100" style="height: 500px; object-fit: contain;" alt="Project Image">
+                    </div>
                 <?php else: ?>
                     <div class="bg-secondary bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center w-100 mb-5" style="height: 500px;">
                         <i class="fas fa-image fa-5x text-muted"></i>

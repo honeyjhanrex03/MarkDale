@@ -15,9 +15,11 @@
             <div class="col-md-6 col-lg-4">
                 <a href="project?id=<?= $project['id'] ?>" class="text-decoration-none">
                     <div class="custom-card p-0 overflow-hidden d-flex flex-column h-100" style="transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <img src="<?= htmlspecialchars($project['image']) ?>" alt="Project" class="img-fluid w-100" style="height: 200px; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="bg-secondary bg-opacity-10 w-100 align-items-center justify-content-center" style="height: 200px; display: none;">
-                            <i class="fas fa-image fa-3x text-muted"></i>
+                        <div style="background-color: #121218; height: 200px;">
+                            <img src="<?= htmlspecialchars($project['image']) ?>" alt="Project" class="img-fluid w-100" style="height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="bg-secondary bg-opacity-10 w-100 align-items-center justify-content-center" style="height: 200px; display: none;">
+                                <i class="fas fa-image fa-3x text-muted"></i>
+                            </div>
                         </div>
                         <div class="p-4 d-flex flex-column flex-grow-1">
                             <h5 class="text-white mb-2"><?= htmlspecialchars($project['title']) ?></h5>
