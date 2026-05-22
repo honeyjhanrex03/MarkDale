@@ -18,9 +18,9 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="custom-card p-4 h-100 d-flex flex-column" style="border-radius: 16px;">
                     <div class="mb-4">
-                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-4 bg-secondary bg-opacity-10" style="width: 60px; height: 60px;">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-4 bg-secondary bg-opacity-10" style="width: 60px; height: 60px;">
                             <?php if(!empty($skill['image'])): ?>
-                                <img src="<?= htmlspecialchars($skill['image']) ?>" alt="<?= htmlspecialchars($skill['name']) ?>" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                                <img src="<?= htmlspecialchars($skill['image']) ?>" alt="<?= htmlspecialchars($skill['name']) ?>" style="width: 40px; height: 40px; object-fit: contain;">
                             <?php else: ?>
                                 <i class="<?= htmlspecialchars($skill['icon']) ?> fa-2x"></i>
                             <?php endif; ?>
