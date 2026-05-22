@@ -155,6 +155,7 @@ try {
         .admin-logo-text span.brand-panel {
             background: linear-gradient(135deg, var(--primary-color), #b070ff);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
