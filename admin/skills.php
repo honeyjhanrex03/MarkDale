@@ -68,7 +68,7 @@ require_once 'includes/header.php';
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <div class="d-flex align-items-center gap-3">
                     <?php if(!empty($skill['image'])): ?>
-                        <img src="../<?= htmlspecialchars($skill['image']) ?>" alt="<?= htmlspecialchars($skill['name']) ?>" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
+                        <img src="../<?= htmlspecialchars($skill['image']) ?>" alt="<?= htmlspecialchars($skill['name']) ?>" style="width: 40px; height: 40px; object-fit: contain;">
                     <?php else: ?>
                         <i class="<?= htmlspecialchars($skill['icon']) ?> fa-2x"></i>
                     <?php endif; ?>
