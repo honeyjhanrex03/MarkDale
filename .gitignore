@@ -9,5 +9,11 @@ error_log
 # Environment variables (if added later)
 .env
 
+# Uploaded Media (ignore contents, keep folder)
+assets/images/uploads/*
+!assets/images/uploads/.gitkeep
+assets/images/services/*
+!assets/images/services/.gitkeep
+
 # MacOS
 .DS_Store
