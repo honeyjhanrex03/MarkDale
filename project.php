@@ -52,10 +52,10 @@ require_once 'includes/header.php';
                                 <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="<?= $index ?>" <?= $index === 0 ? 'class="active"' : '' ?>></button>
                             <?php endforeach; ?>
                         </div>
-                        <div class="carousel-inner" style="background-color: #121218;">
+                        <div class="carousel-inner" style="background-color: #121218; height: 500px;">
                             <?php foreach($gallery as $index => $img): ?>
-                                <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-                                    <img src="<?= htmlspecialchars($img) ?>" class="d-block w-100" style="height: 500px; object-fit: contain;" alt="Project Image">
+                                <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>" style="height: 500px;">
+                                    <img src="<?= htmlspecialchars($img) ?>" class="d-block w-100" style="height: 500px !important; max-height: 500px !important; object-fit: contain;" alt="Project Image">
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -67,8 +67,8 @@ require_once 'includes/header.php';
                         </button>
                     </div>
                 <?php elseif(count($gallery) == 1): ?>
-                    <div class="rounded-4 shadow-lg w-100 mb-5 overflow-hidden" style="background-color: #121218;">
-                        <img src="<?= htmlspecialchars($gallery[0]) ?>" class="img-fluid w-100" style="height: 500px; object-fit: contain;" alt="Project Image">
+                    <div class="rounded-4 shadow-lg w-100 mb-5 overflow-hidden" style="background-color: #121218; height: 500px;">
+                        <img src="<?= htmlspecialchars($gallery[0]) ?>" class="img-fluid w-100" style="height: 500px !important; max-height: 500px !important; object-fit: contain;" alt="Project Image">
                     </div>
                 <?php else: ?>
                     <div class="bg-secondary bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center w-100 mb-5" style="height: 500px;">
@@ -84,7 +84,7 @@ require_once 'includes/header.php';
             
             <!-- Right Side: Sidebar Info -->
             <div class="col-lg-4">
-                <div class="custom-card p-4 sticky-top" style="top: 100px;">
+                <div class="custom-card p-4 sticky-top" style="top: 100px; z-index: 10;">
                     <h5 class="text-white mb-4 border-bottom pb-3" style="border-color: rgba(255,255,255,0.05) !important;">Project Details</h5>
                     
                     <?php if(!empty($project['client'])): ?>
