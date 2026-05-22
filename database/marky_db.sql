@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2026 at 04:43 PM
+-- Generation Time: May 22, 2026 at 05:38 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -91,7 +91,7 @@ CREATE TABLE `page_views` (
 --
 
 INSERT INTO `page_views` (`id`, `view_date`, `views`) VALUES
-(1, '2026-05-22', 851);
+(1, '2026-05-22', 925);
 
 -- --------------------------------------------------------
 
@@ -110,6 +110,13 @@ CREATE TABLE `projects` (
   `project_date` varchar(100) DEFAULT '',
   `gallery_images` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`id`, `title`, `description`, `image`, `link`, `tech_stack`, `client`, `project_date`, `gallery_images`) VALUES
+(13, 'PCNHS E-Learning Management System UI/UX Prototype', 'Designed a complete UI/UX prototype for the PCNHS E-Learning Management System using Figma. The prototype includes responsive mobile and desktop interfaces for students and administrators, featuring dashboards, assignment management, subject tracking, scheduling, announcements, chatbot assistance, and administrative monitoring tools. The design focuses on creating a clean, user-friendly, and modern academic experience with organized workflows, intuitive navigation, and visually consistent interfaces tailored for educational environments. The project demonstrates skills in user interface design, user experience planning, dashboard structuring, responsive layouts, and educational system workflow visualization.', 'assets/images/uploads/6a107761b3558_main.png', '', 'Figma, UI/UX Design, Wireframing, Prototyping, Responsive Design, Dashboard Design', 'Academic / School Prototype Project', '06 January. 2023', 'assets/images/uploads/6a1073de5f7db_gallery_0.png,assets/images/uploads/6a1073de5f91a_gallery_1.png,assets/images/uploads/6a1073de5fa69_gallery_2.png,assets/images/uploads/6a1073de5fb98_gallery_3.png,assets/images/uploads/6a1073de5fd11_gallery_4.png,assets/images/uploads/6a1073de5fe4e_gallery_5.png,assets/images/uploads/6a1073de5ff74_gallery_6.png,assets/images/uploads/6a1073de60090_gallery_7.png,assets/images/uploads/6a1073de601d7_gallery_8.png,assets/images/uploads/6a1073de602fb_gallery_9.png,assets/images/uploads/6a1073de60425_gallery_10.png,assets/images/uploads/6a1073de60548_gallery_11.png,assets/images/uploads/6a1073de6068e_gallery_12.png,assets/images/uploads/6a1073de607b6_gallery_13.png,assets/images/uploads/6a1073de608e9_gallery_14.png,assets/images/uploads/6a1073de60a39_gallery_15.png,assets/images/uploads/6a1073de60b6c_gallery_16.png,assets/images/uploads/6a1073de60ca5_gallery_17.png,assets/images/uploads/6a1073de60dfa_gallery_18.png,assets/images/uploads/6a10763fd88a7_gallery_0.png,assets/images/uploads/6a10763fd89f0_gallery_1.png,assets/images/uploads/6a10763fd8ace_gallery_2.png,assets/images/uploads/6a10763fd8bd8_gallery_3.png,assets/images/uploads/6a10763fd8ce3_gallery_4.png,assets/images/uploads/6a10763fd8dd7_gallery_5.png,assets/images/uploads/6a10763fd8ebb_gallery_6.png,assets/images/uploads/6a10763fd8fa7_gallery_7.png,assets/images/uploads/6a10763fd907e_gallery_8.png,assets/images/uploads/6a10763fd916f_gallery_9.png,assets/images/uploads/6a10763fd923e_gallery_10.png,assets/images/uploads/6a10763fdd979_gallery_11.png,assets/images/uploads/6a10763fddb2b_gallery_12.png,assets/images/uploads/6a10763fddc98_gallery_13.png,assets/images/uploads/6a10763fe0e4a_gallery_14.png,assets/images/uploads/6a10763fe0fb2_gallery_15.png,assets/images/uploads/6a10763fe119a_gallery_16.png,assets/images/uploads/6a10763fe12e9_gallery_17.png,assets/images/uploads/6a10763fe1417_gallery_18.png,assets/images/uploads/6a107761b369e_gallery_0.png,assets/images/uploads/6a107761b385d_gallery_1.png,assets/images/uploads/6a107761b39b6_gallery_2.png,assets/images/uploads/6a107761b3ae7_gallery_3.png,assets/images/uploads/6a107761b3c25_gallery_4.png,assets/images/uploads/6a107761b3d4e_gallery_5.png,assets/images/uploads/6a107761b3e77_gallery_6.png,assets/images/uploads/6a107761b3f9b_gallery_7.png,assets/images/uploads/6a107761b40dd_gallery_8.png,assets/images/uploads/6a107761b42d7_gallery_9.png,assets/images/uploads/6a107761b450e_gallery_10.png,assets/images/uploads/6a107761b4692_gallery_11.png,assets/images/uploads/6a107761b4803_gallery_12.png,assets/images/uploads/6a107761b4994_gallery_13.png,assets/images/uploads/6a107761b4b29_gallery_14.png,assets/images/uploads/6a107761b4c97_gallery_15.png,assets/images/uploads/6a107761b4dd4_gallery_16.png,assets/images/uploads/6a107761b4f81_gallery_17.png,assets/images/uploads/6a107761b5120_gallery_18.png');
 
 -- --------------------------------------------------------
 
@@ -179,13 +186,13 @@ CREATE TABLE `skills` (
 --
 
 INSERT INTO `skills` (`id`, `name`, `percentage`, `icon`, `image`) VALUES
-(1, 'HTML', 87, 'fab fa-html5 text-danger', ''),
-(2, 'CSS', 85, 'fab fa-css3-alt text-primary', ''),
-(3, 'JavaScript', 70, 'fab fa-js text-warning', ''),
-(4, 'PHP', 75, 'fab fa-php text-info', ''),
-(5, 'Bootstrap 5', 85, 'fab fa-bootstrap text-purple', ''),
-(6, 'Figma (UI/UX)', 80, 'fab fa-figma text-danger', ''),
-(7, 'System Analyst (Docs)', 85, 'fas fa-file-signature text-info', '');
+(1, 'HTML', 87, 'fab fa-html5 text-danger', 'assets/images/uploads/6a10708a895a0_skill.png'),
+(2, 'CSS', 85, 'fab fa-css3-alt text-primary', 'assets/images/uploads/6a1070ae8c7fc_skill.png'),
+(3, 'JavaScript', 70, 'fab fa-js text-warning', 'assets/images/uploads/6a1071580e221_skill.webp'),
+(4, 'PHP', 75, 'fab fa-php text-info', 'assets/images/uploads/6a107184d82d6_skill.webp'),
+(5, 'Bootstrap 5', 85, 'fab fa-bootstrap text-purple', 'assets/images/uploads/6a1070c0870a9_skill.png'),
+(6, 'Figma (UI/UX)', 80, 'fab fa-figma text-danger', 'assets/images/uploads/6a107119103f3_skill.png'),
+(7, 'System Analyst (Docs)', 85, 'fas fa-file-signature text-info', 'assets/images/uploads/6a1070fa5f932_skill.png');
 
 -- --------------------------------------------------------
 
@@ -280,13 +287,13 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `page_views`
 --
 ALTER TABLE `page_views`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=223;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=297;
 
 --
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `services`
