@@ -46,7 +46,7 @@ require_once 'includes/header.php';
             <!-- Left Side: Carousel & Details -->
             <div class="col-lg-8">
                 <?php if(count($gallery) > 1): ?>
-                    <div id="projectCarousel" class="carousel slide rounded-4 overflow-hidden shadow-lg mb-5">
+                    <div id="projectCarousel" class="carousel slide rounded-4 overflow-hidden shadow-lg mb-5" data-bs-ride="carousel" data-bs-interval="1500" data-bs-pause="false">
                         <div class="carousel-indicators">
                             <?php foreach($gallery as $index => $img): ?>
                                 <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="<?= $index ?>" <?= $index === 0 ? 'class="active"' : '' ?>></button>
