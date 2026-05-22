@@ -1,0 +1,13 @@
+# IDE
+.vscode/
+.idea/
+
+# Logs
+error_log
+*.log
+
+# Environment variables (if added later)
+.env
+
+# MacOS
+.DS_Store
