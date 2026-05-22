@@ -20,7 +20,7 @@
                     <div class="mb-4">
                         <div class="d-inline-flex align-items-center justify-content-center rounded-4 bg-secondary bg-opacity-10" style="width: 60px; height: 60px; overflow: hidden;">
                             <?php if(!empty($skill['image'])): ?>
-                                <img src="<?= htmlspecialchars($skill['image']) ?>" alt="<?= htmlspecialchars($skill['name']) ?>" style="width: 45px; height: 45px; object-fit: contain;">
+                                <img src="<?= htmlspecialchars($skill['image']) ?>" alt="<?= htmlspecialchars($skill['name']) ?>" style="width: 52px; height: 52px; object-fit: cover; border-radius: 12px;">
                             <?php else: ?>
                                 <i class="<?= htmlspecialchars($skill['icon']) ?> fa-2x"></i>
                             <?php endif; ?>
