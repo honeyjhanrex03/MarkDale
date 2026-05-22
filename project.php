@@ -101,11 +101,13 @@ require_once 'includes/header.php';
                         </div>
                     </div>
                     
+                    <?php if(!empty($project['link'])): ?>
                     <div class="mt-5 pt-3 border-top" style="border-color: rgba(255,255,255,0.05) !important;">
                         <a href="<?= htmlspecialchars($project['link']) ?>" target="_blank" class="btn btn-primary-custom w-100 py-3 fw-bold shadow-sm d-flex justify-content-center align-items-center gap-2">
                             <span>View Live Project</span> <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
